@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="game">
+  <g transform="translate(-208.785 -878.147)">
+    <circle cx="224.785" cy="894.147" r="16" fill="#239fdb" fill-rule="evenodd"></circle>
+    <g color="#000" transform="translate(-108.239 67.665)scale(.5814)">
+      <rect width="3.419" height="9.447" x="239.41" y="1520.18" fill="#ffd42a" stroke="#373748" stroke-linecap="round" stroke-linejoin="round" overflow="visible" rx="0" ry="0" style="isolation:auto;mix-blend-mode:normal" transform="matrix(.97114 -.23851 .2212 .97523 0 0)"></rect>
+      <path fill="#f55" d="m566.484 1427.159 8.193-2.013c1.933-1.78 3.008-4.253 2.438-6.766l-1.06-4.673c-.881-3.884-5.096-6.15-9.45-5.08-4.354 1.07-7.15 5.057-6.27 8.94l1.06 4.674c.57 2.512 2.594 4.224 5.089 4.918z" overflow="visible" style="isolation:auto;mix-blend-mode:normal"></path>
+      <path fill="#ffd42a" d="M566 1427.2c1.496.415 3.102.593 4.791.178 1.69-.415 3.05-1.32 4.209-2.389l-9 2.21z" overflow="visible" style="isolation:auto;mix-blend-mode:normal"></path>
+      <path fill="none" stroke="#373748" stroke-linecap="round" stroke-linejoin="round" d="M566.627 1408.316c-4.513 1.108-7.411 5.24-6.499 9.263l1.099 4.842c.59 2.603 2.687 4.376 5.273 5.094 1.411.393 2.926.56 4.52.168 1.593-.391 2.877-1.245 3.97-2.253 2.005-1.845 3.119-4.408 2.528-7.01l-1.098-4.842c-.912-4.024-5.28-6.37-9.793-5.262z" overflow="visible" style="isolation:auto;mix-blend-mode:normal"></path>
+      <g transform="scale(-1 1)rotate(-18.997 -1.241 4861.362)">
+        <rect width="3.419" height="9.447" x="239.41" y="1520.18" fill="#ffd42a" stroke="#373748" stroke-linecap="round" stroke-linejoin="round" overflow="visible" rx="0" ry="0" style="isolation:auto;mix-blend-mode:normal" transform="matrix(.97114 -.23851 .2212 .97523 0 0)"></rect>
+        <path fill="#f55" d="m566.484 1427.159 8.193-2.013c1.933-1.78 3.008-4.253 2.438-6.766l-1.06-4.673c-.881-3.884-5.096-6.15-9.45-5.08-4.354 1.07-7.15 5.057-6.27 8.94l1.06 4.674c.57 2.512 2.594 4.224 5.089 4.918z" overflow="visible" style="isolation:auto;mix-blend-mode:normal"></path>
+        <path fill="#ffd42a" d="M566 1427.2c1.496.415 3.102.593 4.791.178 1.69-.415 3.05-1.32 4.209-2.389l-9 2.21z" overflow="visible" style="isolation:auto;mix-blend-mode:normal"></path>
+        <path fill="none" stroke="#373748" stroke-linecap="round" stroke-linejoin="round" d="M566.627 1408.316c-4.513 1.108-7.411 5.24-6.499 9.263l1.099 4.842c.59 2.603 2.687 4.376 5.273 5.094 1.411.393 2.926.56 4.52.168 1.593-.391 2.877-1.245 3.97-2.253 2.005-1.845 3.119-4.408 2.528-7.01l-1.098-4.842c-.912-4.024-5.28-6.37-9.793-5.262z" overflow="visible" style="isolation:auto;mix-blend-mode:normal"></path>
+      </g>
+      <ellipse cx="584.598" cy="1421.842" fill="#f2f2f2" stroke="#373748" stroke-linecap="round" stroke-linejoin="round" overflow="visible" rx="2.902" ry="3.02" style="isolation:auto;mix-blend-mode:normal"></ellipse>
+    </g>
+  </g>
+</svg>
