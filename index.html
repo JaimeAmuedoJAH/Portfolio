@@ -3,436 +3,483 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <meta name="description" content="Portfolio profesional de Software developer Java, Spring Framework." />
+  <title>Jaime Amuedo — Software Developer</title>
+  <meta name="description" content="Portfolio profesional de Jaime Amuedo, Software Developer Java, Spring Framework, React." />
 
-  <!-- Google Font (opcional, solo tipografía) -->
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts: Press Start 2P (pixel) + Inter (legible body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navegación fija -->
-  <header class="header">
-    <div class="container header__content">
-      <div class="logo">JAH</div>
-      <nav class="nav">
-        <button class="nav__toggle" aria-label="Abrir menú">
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav__list">
-          <li><a href="#hero" class="nav__link">Inicio</a></li>
-          <li><a href="#projects" class="nav__link">Proyectos</a></li>
-          <li><a href="#about" class="nav__link">Sobre mí</a></li>
-          <li><a href="#extra" class="nav__link">Formación</a></li>
-          <li><a href="#contact" class="nav__link">Contáctame</a></li>
-        </ul>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <header class="rpg-header fixed-top">
+    <div class="container-xl px-header d-flex align-items-center justify-content-between">
+      <div class="rpg-logo">JAH<span class="rpg-cursor"></span></div>
+
+      <button class="rpg-hamburger d-lg-none" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+
+      <nav class="rpg-nav" id="mainNav">
+        <a href="#hero"     class="rpg-nav__link">▶ Inicio</a>
+        <a href="#projects" class="rpg-nav__link">⚔ Proyectos</a>
+        <a href="#about"    class="rpg-nav__link">🛡 Sobre mí</a>
+        <a href="#extra"    class="rpg-nav__link">📜 Formación</a>
+        <a href="#contact"  class="rpg-nav__link">✉ Contacto</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero / Banner principal -->
   <main>
-    <section id="hero" class="hero">
-      <div class="container hero__content">
-        <div class="hero__text">
-          <p class="hero__eyebrow">Software Developer</p>
-          <h1 class="hero__title">Jaime Amuedo Hidalgo</h1>
-          <h2 class="hero__subtitle">Software Developer</h2>
-          <p class="hero__description">
-            Desarrollador de Software con base técnica con Java, Spring, TypeScript y React. Experiencia trabajando en aplicaciones Full Stack
-            tanto móviles como web, realizando tanto el diseño del backend (arquitectura, estructura de la BD, desarrollo de API REST) como 
-            el frontend (creación de componentes, maquetación de la página/web, consumo de API).
-          </p>
-          <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary">Ver proyectos</a>
-            <a href="#about" class="btn btn--ghost">Sobre mí</a>
-          </div>
-        </div>
-        <div class="hero__visual">
-          <figure class="hero__photo">
-            <img src="assets/fotoPerfil.jpeg" alt="Foto de Jaime Amuedo Hidalgo" />
-          </figure>
-        </div>
-      </div>
-    </section>
 
-    <!-- Sección Proyectos -->
-    <section id="projects" class="section section--alt">
-      <div class="container">
-        <header class="section__header">
-          <h2 class="section__title">Proyectos destacados</h2>
-          <p class="section__subtitle">
-            Selección de proyectos que muestran mi estructura de trabajo y mis conocimientos.
-          </p>
-        </header>
+    <!-- ═══════════════════════════════════════
+         HERO
+    ════════════════════════════════════════ -->
+    <section id="hero" class="rpg-hero">
+      <div id="stars" class="rpg-stars" aria-hidden="true"></div>
 
-        <div class="projects-groups">
-          <div class="projects-group">
-            <div class="projects-group__header">
-              <h3 class="projects-group__title">Aplicaciones Móvil/Web</h3>
+      <div class="container-xl">
+        <div class="row align-items-center g-5">
+
+          <div class="col-lg-7 rpg-hero__text reveal">
+            <p class="rpg-eyebrow">✦ Software Developer ✦</p>
+            <h1 class="rpg-hero__name">Jaime<br>Amuedo</h1>
+            <p class="rpg-hero__subtitle">Java · Spring · React · JavaScript/TypeScript</p>
+
+            <!-- XP bar -->
+            <div class="rpg-xpbar-wrap mb-4">
+              <div class="rpg-xpbar-label d-flex justify-content-between mb-1">
+                <span>EXP</span><span>LVL 4 Developer</span>
+              </div>
+              <div class="rpg-xpbar">
+                <div class="rpg-xpbar__fill" style="width:87%"></div>
+              </div>
             </div>
-            <div class="projects-grid">
-              <!-- Proyecto móvil 1 -->
-              <article class="project-card">
-                <div class="project-card__header">
-                  <h3 class="project-card__title">Proyecto Fin de Grado</h3>
-                  <p class="project-card__tag">Java · Firebase · Android</p>
-                </div>
-                <p class="project-card__description">
-                  Aplicación móvil para seguimiento de ligas andaluzas de tenis de mesa, con autenticación y gestión de resultados.
-                </p>
-                <ul class="project-card__tech">
-                  <li>Java</li>
-                  <li>Firebase</li>
-                  <li>Material Design</li>
-                  <li>Android Studio</li>
-                </ul>
-                <div class="project-card__links">
-                  <a href="https://github.com/JaimeAmuedoJAH/PRY_TFG" class="project-card__link" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                </div>
-              </article>
 
-              <!-- Proyecto móvil 2 -->
-              <article class="project-card">
-                <div class="project-card__header">
-                  <h3 class="project-card__title">Mapeo</h3>
-                  <p class="project-card__tag">Kotlin · PostgreSQL · Render · Spring Boot</p>
-                </div>
-                <p class="project-card__description">
-                  App móvil para planificar y organizar viajes, con backend desplegado en Render y persistencia en PostgreSQL.
-                </p>
-                <ul class="project-card__tech">
-                  <li>Kotlin</li>
-                  <li>PostgreSQL</li>
-                  <li>Render</li>
-                  <li>Spring Boot</li>
-                </ul>
-                <div class="project-card__links">
-                  <a href="https://github.com/JaimeAmuedoJAH/Mapeo" class="project-card__link" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                </div>
-              </article>
-
-              <article class="project-card">
-                <div class="project-card__header">
-                  <h3 class="project-card__title">Plataforma E-commerce</h3>
-                  <p class="project-card__tag">Java ·Spring Boot · TypeScript · React</p>
-                </div>
-                <p class="project-card__description">
-                  App web de comercio electrónico con backend en Spring Boot y frontend en TypeScript.
-                </p>
-                <ul class="project-card__tech">
-                  <li>Java</li>
-                  <li>TypeScript</li>
-                  <li>Spring Boot</li>
-                  <li>React</li>
-                </ul>
-                <div class="project-card__links">
-                  <a href="https://github.com/JaimeAmuedoJAH/E-commerce_backend" class="project-card__link" target="_blank" rel="noopener noreferrer">Ver backend en GitHub</a>
-                </div>
-                <div class="project-card__links">
-                  <a href="https://github.com/JaimeAmuedoJAH/E-commerce_Frontend" class="project-card__link" target="_blank" rel="noopener noreferrer">Ver frontend en GitHub</a>
-                </div>
-              </article>
-
-            </div>
-          </div>
-
-          <div class="projects-group">
-            <div class="projects-group__header">
-              <h3 class="projects-group__title">Data Analyst</h3>
-            </div>
-            <div class="projects-grid">
-
-               <!-- Proyecto data 1 -->
-              <article class="project-card">
-                <div class="project-card__header">
-                  <h3 class="project-card__title">Proyecto-ML-end_to_end</h3>
-                  <p class="project-card__tag">Python · Streamlit · Docker · ETL · Machine Learning</p>
-                </div>
-                <p class="project-card__description">
-                  Proyecto end-to-end de Machine Learning para predecir najas en telecomunicaciones, incluyendo ETL, EDA, modelado predictivo, 
-                  dashboard en Streamlit, containerización con Docker y despliegue en la nube.
-                </p>
-                <ul class="project-card__tech">
-                  <li>Python</li>
-                  <li>Streamlit</li>
-                  <li>Docker</li>
-                  <li>ETL</li>
-                  <li>Machine Learning</li>
-                </ul>
-                <div class="project-card__links">
-                  <a href="https://github.com/JaimeAmuedoJAH/Proyecto-ML-end_to_end" class="project-card__link" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                </div>
-              </article>
-
-               <!-- Proyecto data 2 -->
-              <article class="project-card">
-                <div class="project-card__header">
-                  <h3 class="project-card__title">Análisis EDA</h3>
-                  <p class="project-card__tag">Python · Jupyter Notebook · EDA</p>
-                </div>
-                <p class="project-card__description">
-                  Análisis exhaustivo de dataset acerca de covid-19, con la realización de un notebook y 
-                  presentación de un informe ejecutivo (EDA), sobre los datos mostrados.
-                </p>
-                <ul class="project-card__tech">
-                  <li>Python</li>
-                  <li>Jupyter Notebook</li>
-                  <li>EDA</li>
-                </ul>
-                <div class="project-card__links">
-                  <a href="https://github.com/JaimeAmuedoJAH/P5-Analisis-Exploratorio-de-Datos-G6" class="project-card__link" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                </div>
-              </article>
-
-               <!-- Proyecto data 3 -->
-              <article class="project-card">
-                <div class="project-card__header">
-                  <h3 class="project-card__title">Análisis negocio airbnb</h3>
-                  <p class="project-card__tag">Power BI · Excel · ETL</p>
-                </div>
-                <p class="project-card__description">
-                  Análisis exhaustivo de dataset acerca de airbnb, con el análisis y estudio de los alojamientos y distintos kpis acerca
-                  de la empresa.
-                </p>
-                <ul class="project-card__tech">
-                  <li>Power BI</li>
-                  <li>Excel</li>
-                  <li>ETL</li>
-                </ul>
-                <div class="project-card__links">
-                  <a href="https://github.com/JaimeAmuedoJAH/Analisis_negocio_airbnb" class="project-card__link" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
-                </div>
-              </article>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Sobre mí -->
-    <section id="about" class="section">
-      <div class="container about">
-        <div class="about__text">
-          <h2 class="section__title">Sobre mí</h2>
-          <p class="section__subtitle">
-            Técnico Superior en desarrollo de aplicaciones multiplataforma con experiencia en el desarrollo de aplicaciones Android
-            y web principalmente en Java, Spring, TypeScript y React.
-            Me considero una persona proactiva, resolutiva y con gran capacidad de aprendizaje, cualidades que me permiten 
-            adaptarme rápidamente a nuevos entornos técnicos y colaborar eficazmente en equipo. 
-          </p>
-          <div class="about__actions">
-            <a
-              class="btn btn--primary"
-              href="assets/CV_JAIME AMUEDO HIDALGO.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Mi CV
-            </a>
-          </div>
-        </div>
-
-        <div class="about__skills">
-          <h3 class="about__skills-title">Habilidades técnicas</h3>
-          <ul class="skills-list">
-            <li class="skills-list__item">
-              <span class="skills-list__label">Lenguajes</span>
-              <span class="skills-list__value">Java, Kotlin, SQL, TypeScript/JavaScript</span>
-            </li>
-            <li class="skills-list__item">
-              <span class="skills-list__label">Frameworks</span>
-              <span class="skills-list__value">Spring, Spring Boot, Angular, React</span>
-            </li>
-            <li class="skills-list__item">
-              <span class="skills-list__label">Bases de datos</span>
-              <span class="skills-list__value">PostgreSQL, MySQL, MongoDB, Firebase</span>
-            </li>
-            <li class="skills-list__item">
-              <span class="skills-list__label">Herramientas</span>
-              <span class="skills-list__value">Git/Github, Android Studio, Docker, Postman</span>
-            </li>
-            <li class="skills-list__item">
-              <span class="skills-list__label">Metodologías</span>
-              <span class="skills-list__value">Scrum, Agile</span>
-            </li>
-            <li class="skills-list__item">
-                <span class="skills-list__label">Otros</span>
-                <span class="skills-list__value">Clean Code, Arquitectura MVC/MVVM, POO</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Estudios y conocimientos adicionales -->
-    <section id="extra" class="section section--alt">
-      <div class="container extra">
-        <header class="section__header">
-          <h2 class="section__title">Formación y conocimientos</h2>
-          <p class="section__subtitle">
-            Formación técnica y stack adicional que complemento junto el desarrollo de aplicaciones Móvil/Web.
-          </p>
-        </header>
-
-        <div class="extra__grid">
-          <article class="extra-card">
-            <div class="extra-card__pill">Formación</div>
-            <h3 class="extra-card__title">Desarrollo de Aplicaciones Multiplataforma</h3>
-            <p class="extra-card__text">
-                Base sólida en construcción de aplicaciones robustas, patrones de arquitectura
-              y escritura de código mantenible.
+            <p class="rpg-hero__desc">
+              Desarrollador Full Stack con base técnica en Java, Spring, TypeScript y React.
+              Experiencia en aplicaciones móviles y web — diseño de backend (API REST, BD) y frontend (componentes, maquetación).
             </p>
-            <ul class="extra-card__list">
-              <li>Java / Kotlin</li>
-              <li>TypeScript / JavaScript</li>
-              <li>Spring</li>
-              <li>Spring Boot</li>
-              <li>REST APIs</li>
-              <li>Bases de datos SQL / NoSQL</li>
-            </ul>
-          </article>
 
-          <article class="extra-card">
-            <div class="extra-card__pill extra-card__pill--accent">Tech Stack complementario</div>
-            <h3 class="extra-card__title">Herramientas y metodologías</h3>
-            <p class="extra-card__text">
-              Conjunto de herramientas que aplico para desarrollo, integración y colaboración.
-            </p>
-            <div class="extra-card__chips">
-              <span>Git & GitHub</span>
-              <span>Maven / Gradle</span>
-              <span>Docker</span>
-              <span>Postman</span>
-              <span>APIs REST</span>
-              <span>Jetpack Compose</span>
-              <span>IntelliJ IDEA</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Estudios y conocimientos adicionales -->
-    <section id="extra-2" class="section section--alt">
-      <div class="container extra">
-        <header class="section__header">
-          <h2 class="section__title">Formación complementaria</h2>
-          <p class="section__subtitle">
-            Formación técnica y stack adicional.
-          </p>
-        </header>
-
-        <div class="extra__grid">
-          <article class="extra-card">
-            <div class="extra-card__pill">Formación</div>
-            <h3 class="extra-card__title">Bootcamp Data Analyst Junior (850 horas)</h3>
-            <p class="extra-card__text">
-                Formación técnica y stack adicional que complemento junto a la formación de analista de datos.
-            </p>
-            <ul class="extra-card__list">
-              <li>Python</li>
-              <li>Numpy / Pandas / matplotlib / seaborn / scikit-learn</li>
-              <li>Jupyter Notebook / Google Colab</li>
-              <li>Excel avanzado / Power BI</li>
-            </ul>
-          </article>
-
-          <article class="extra-card">
-            <div class="extra-card__pill extra-card__pill--accent">Tech Stack complementario</div>
-            <h3 class="extra-card__title">Herramientas y metodologías</h3>
-            <p class="extra-card__text">
-              Conjunto de herramientas que aplico para desarrollo, integración y colaboración.
-            </p>
-            <div class="extra-card__chips">
-                <span>Python</span>
-                <span>Pandas / NumPy</span>
-                <span>scikit-learn</span>
-                <span>Matplotlib / Seaborn</span>
-                <span>Jupyter / Colab</span>
-                <span>Power BI / Excel</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Contacto -->
-    <section id="contact" class="section section--contact">
-      <div class="container contact">
-        <div class="section__header">
-          <h2 class="section__title">Contáctame</h2>
-          <p class="section__subtitle">
-            Estoy abierto a nuevas oportunidades y colaboraciones. No dudes en contactarme para discutir cómo puedo aportar valor a tu equipo o proyecto.
-          </p>
-        </div>
-
-        <div class="contact__grid">
-          <div class="contact__card">
-            <div class="contact__pill">Información</div>
-            <ul class="contact__list">
-              <li class="contact__item">
-                <span class="contact__icon">📞</span>
-                <div>
-                  <p class="contact__label">Teléfono</p>
-                  <p class="contact__value">+34 638 89 38 47</p>
-                </div>
-              </li>
-              <li class="contact__item">
-                <span class="contact__icon">✉️</span>
-                <div>
-                  <p class="contact__label">Email</p>
-                  <p class="contact__value">jaimeamuedo@gmail.com</p>
-                </div>
-              </li>
-              <li class="contact__item">
-                <span class="contact__icon">📍</span>
-                <div>
-                  <p class="contact__label">Ubicación</p>
-                  <p class="contact__value">Sevilla</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="contact__card contact__card--cta">
-            <div class="contact__pill contact__pill--accent">Hablemos</div>
-            <p class="contact__cta-text">
-              Disponible para proyectos de analítica, visualización y modelado y proyectos de desarrollo de aplicaciones Java.
-              Respondo en menos de 24h.
-            </p>
-            <div class="contact__actions">
-              <a class="btn btn--primary" href="https://github.com/JaimeAmuedoJAH" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a class="btn btn--ghost" href="https://www.linkedin.com/in/jaime-amuedo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#projects" class="rpg-btn rpg-btn--primary">⚔ Ver proyectos</a>
+              <a href="#about"    class="rpg-btn rpg-btn--ghost">🛡 Sobre mí</a>
+              <a href="assets/CV_JAIME AMUEDO HIDALGO.pdf" target="_blank" rel="noopener noreferrer" class="rpg-btn rpg-btn--ghost">📄 Mi CV</a>
             </div>
           </div>
+
+          <div class="col-lg-5 text-center reveal">
+            <div class="rpg-avatar-wrap mx-auto">
+              <figure class="rpg-avatar-frame mb-0">
+                <img src="assets/fotoPerfil.jpeg" alt="Foto de Jaime Amuedo Hidalgo" />
+              </figure>
+              <div class="rpg-avatar-badge">LVL 4</div>
+              <div class="rpg-avatar-name">Jaime Amuedo</div>
+              <div class="rpg-avatar-class">Software Developer</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════════
+         PROYECTOS
+    ════════════════════════════════════════ -->
+    <section id="projects" class="rpg-section">
+      <div class="container-xl">
+
+        <div class="rpg-section__header text-center mb-5 reveal">
+          <div class="rpg-section__tag">[ Zona de Proyectos ]</div>
+          <h2 class="rpg-section__title">Proyectos destacados</h2>
+          <p class="rpg-section__sub">Selección de misiones completadas que muestran mi stack y forma de trabajar.</p>
+        </div>
+
+        <!-- Grupo: Móvil / Web -->
+        <div class="mb-5 reveal">
+          <div class="rpg-group-header mb-3">
+            <span class="rpg-group-icon">🏰</span>
+            <span class="rpg-group-title">Aplicaciones Móvil / Web</span>
+          </div>
+          <div class="row g-4">
+
+            <div class="col-md-6 col-xl-4">
+              <article class="rpg-card h-100">
+                <div class="rpg-card__top">
+                  <span class="rpg-card__icon">🏰</span>
+                  <div>
+                    <h3 class="rpg-card__title">Proyecto Fin de Grado</h3>
+                    <p class="rpg-card__tag">Java · Firebase · Android</p>
+                  </div>
+                </div>
+                <p class="rpg-card__desc">Aplicación móvil para seguimiento de ligas andaluzas de tenis de mesa, con autenticación y gestión de resultados.</p>
+                <div class="rpg-card__tech">
+                  <span>Java</span><span>Firebase</span><span>Material Design</span><span>Android Studio</span>
+                </div>
+                <div class="rpg-card__links mt-auto pt-3">
+                  <a href="https://github.com/JaimeAmuedoJAH/PRY_TFG" target="_blank" rel="noopener noreferrer" class="rpg-link">► GitHub</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <article class="rpg-card h-100">
+                <div class="rpg-card__top">
+                  <span class="rpg-card__icon">🗺️</span>
+                  <div>
+                    <h3 class="rpg-card__title">Mapeo</h3>
+                    <p class="rpg-card__tag">Kotlin · PostgreSQL · Spring Boot</p>
+                  </div>
+                </div>
+                <p class="rpg-card__desc">App móvil para planificar y organizar viajes, con backend desplegado en Render y persistencia en PostgreSQL.</p>
+                <div class="rpg-card__tech">
+                  <span>Kotlin</span><span>PostgreSQL</span><span>Render</span><span>Spring Boot</span>
+                </div>
+                <div class="rpg-card__links mt-auto pt-3">
+                  <a href="https://github.com/JaimeAmuedoJAH/Mapeo" target="_blank" rel="noopener noreferrer" class="rpg-link">► GitHub</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <article class="rpg-card h-100">
+                <div class="rpg-card__top">
+                  <span class="rpg-card__icon">🏪</span>
+                  <div>
+                    <h3 class="rpg-card__title">Plataforma E-commerce</h3>
+                    <p class="rpg-card__tag">Java · Spring Boot · TypeScript · React</p>
+                  </div>
+                </div>
+                <p class="rpg-card__desc">App web de comercio electrónico con backend en Spring Boot y frontend en TypeScript + React.</p>
+                <div class="rpg-card__tech">
+                  <span>Java</span><span>TypeScript</span><span>Spring Boot</span><span>React</span>
+                </div>
+                <div class="rpg-card__links mt-auto pt-3 d-flex gap-3">
+                  <a href="https://github.com/JaimeAmuedoJAH/E-commerce_backend" target="_blank" rel="noopener noreferrer" class="rpg-link">► Backend</a>
+                  <a href="https://github.com/JaimeAmuedoJAH/E-commerce_Frontend" target="_blank" rel="noopener noreferrer" class="rpg-link">► Frontend</a>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Grupo: Data Analyst -->
+        <div class="reveal">
+          <div class="rpg-group-header mb-3">
+            <span class="rpg-group-icon">🔮</span>
+            <span class="rpg-group-title">Data Analyst</span>
+          </div>
+          <div class="row g-4">
+
+            <div class="col-md-6 col-xl-4">
+              <article class="rpg-card rpg-card--data h-100">
+                <div class="rpg-card__top">
+                  <span class="rpg-card__icon">🔮</span>
+                  <div>
+                    <h3 class="rpg-card__title">Proyecto ML End-to-End</h3>
+                    <p class="rpg-card__tag">Python · Streamlit · Docker · ML</p>
+                  </div>
+                </div>
+                <p class="rpg-card__desc">Proyecto end-to-end de Machine Learning para predecir bajas en telecomunicaciones: ETL, EDA, modelado, dashboard Streamlit y Docker.</p>
+                <div class="rpg-card__tech">
+                  <span>Python</span><span>Streamlit</span><span>Docker</span><span>scikit-learn</span>
+                </div>
+                <div class="rpg-card__links mt-auto pt-3">
+                  <a href="https://github.com/JaimeAmuedoJAH/Proyecto-ML-end_to_end" target="_blank" rel="noopener noreferrer" class="rpg-link">► GitHub</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <article class="rpg-card rpg-card--data h-100">
+                <div class="rpg-card__top">
+                  <span class="rpg-card__icon">📊</span>
+                  <div>
+                    <h3 class="rpg-card__title">Análisis EDA Covid-19</h3>
+                    <p class="rpg-card__tag">Python · Jupyter · EDA</p>
+                  </div>
+                </div>
+                <p class="rpg-card__desc">Análisis exhaustivo de dataset Covid-19 con notebook Jupyter e informe ejecutivo sobre los datos mostrados.</p>
+                <div class="rpg-card__tech">
+                  <span>Python</span><span>Jupyter Notebook</span><span>EDA</span>
+                </div>
+                <div class="rpg-card__links mt-auto pt-3">
+                  <a href="https://github.com/JaimeAmuedoJAH/P5-Analisis-Exploratorio-de-Datos-G6" target="_blank" rel="noopener noreferrer" class="rpg-link">► GitHub</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <article class="rpg-card rpg-card--data h-100">
+                <div class="rpg-card__top">
+                  <span class="rpg-card__icon">🏠</span>
+                  <div>
+                    <h3 class="rpg-card__title">Análisis Airbnb</h3>
+                    <p class="rpg-card__tag">Power BI · Excel · ETL</p>
+                  </div>
+                </div>
+                <p class="rpg-card__desc">Análisis de dataset Airbnb: estudio de alojamientos, KPIs de negocio y pipeline ETL completo.</p>
+                <div class="rpg-card__tech">
+                  <span>Power BI</span><span>Excel</span><span>ETL</span>
+                </div>
+                <div class="rpg-card__links mt-auto pt-3">
+                  <a href="https://github.com/JaimeAmuedoJAH/Analisis_negocio_airbnb" target="_blank" rel="noopener noreferrer" class="rpg-link">► GitHub</a>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SOBRE MÍ / SKILLS
+    ════════════════════════════════════════ -->
+    <section id="about" class="rpg-section rpg-section--alt">
+      <div class="container-xl">
+
+        <div class="rpg-section__header text-center mb-5 reveal">
+          <div class="rpg-section__tag">[ Stats del Personaje ]</div>
+          <h2 class="rpg-section__title">Sobre mí</h2>
+        </div>
+
+        <div class="row g-5 align-items-start">
+
+          <div class="col-lg-5 reveal">
+            <div class="rpg-about-text">
+              <p>
+                Técnico Superior en Desarrollo de Aplicaciones Multiplataforma con experiencia en aplicaciones Android y web.
+                Trabajo principalmente con Java, Spring, TypeScript y React.
+              </p>
+              <p>
+                Me considero una persona proactiva, resolutiva y con gran capacidad de aprendizaje — cualidades que me permiten
+                adaptarme rápidamente a nuevos entornos técnicos y colaborar eficazmente en equipo.
+              </p>
+              <a href="assets/CV_JAIME AMUEDO HIDALGO.pdf" target="_blank" rel="noopener noreferrer" class="rpg-btn rpg-btn--primary mt-3 d-inline-block">
+                📄 Descargar CV
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-7 reveal">
+            <div class="rpg-skills">
+
+              <div class="rpg-skill-row mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="rpg-skill-label">Java / Spring Boot</span>
+                  <span class="rpg-skill-val">90</span>
+                </div>
+                <div class="rpg-skill-bar"><div class="rpg-skill-fill rpg-skill-fill--blue" style="width:90%"></div></div>
+              </div>
+
+              <div class="rpg-skill-row mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="rpg-skill-label">Kotlin / Android</span>
+                  <span class="rpg-skill-val">80</span>
+                </div>
+                <div class="rpg-skill-bar"><div class="rpg-skill-fill rpg-skill-fill--blue" style="width:80%"></div></div>
+              </div>
+
+              <div class="rpg-skill-row mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="rpg-skill-label">TypeScript / React</span>
+                  <span class="rpg-skill-val">75</span>
+                </div>
+                <div class="rpg-skill-bar"><div class="rpg-skill-fill rpg-skill-fill--gold" style="width:75%"></div></div>
+              </div>
+
+              <div class="rpg-skill-row mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="rpg-skill-label">Python / Machine Learning</span>
+                  <span class="rpg-skill-val">70</span>
+                </div>
+                <div class="rpg-skill-bar"><div class="rpg-skill-fill rpg-skill-fill--gold" style="width:70%"></div></div>
+              </div>
+
+              <div class="rpg-skill-row mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="rpg-skill-label">PostgreSQL / MongoDB / Firebase</span>
+                  <span class="rpg-skill-val">82</span>
+                </div>
+                <div class="rpg-skill-bar"><div class="rpg-skill-fill rpg-skill-fill--green" style="width:82%"></div></div>
+              </div>
+
+              <div class="rpg-skill-row mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="rpg-skill-label">Docker / Git / DevOps</span>
+                  <span class="rpg-skill-val">70</span>
+                </div>
+                <div class="rpg-skill-bar"><div class="rpg-skill-fill rpg-skill-fill--green" style="width:65%"></div></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FORMACIÓN
+    ════════════════════════════════════════ -->
+    <section id="extra" class="rpg-section">
+      <div class="container-xl">
+
+        <div class="rpg-section__header text-center mb-5 reveal">
+          <div class="rpg-section__tag">[ Grimorio de Conocimiento ]</div>
+          <h2 class="rpg-section__title">Formación y conocimientos</h2>
+          <p class="rpg-section__sub">Formación técnica y stack adicional que complementan el desarrollo de aplicaciones.</p>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 reveal">
+            <article class="rpg-card rpg-card--lore h-100">
+              <div class="rpg-card__pill mb-3">📜 Formación</div>
+              <h3 class="rpg-card__title mb-2">Desarrollo de Aplicaciones Multiplataforma</h3>
+              <p class="rpg-card__desc">Base sólida en construcción de aplicaciones robustas, patrones de arquitectura y escritura de código mantenible.</p>
+              <ul class="rpg-list">
+                <li>Java / Kotlin</li>
+                <li>TypeScript / JavaScript</li>
+                <li>Spring / Spring Boot</li>
+                <li>REST APIs</li>
+                <li>Bases de datos SQL / NoSQL</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-md-6 reveal">
+            <article class="rpg-card rpg-card--lore h-100">
+              <div class="rpg-card__pill rpg-card__pill--gold mb-3">⚡ Tech Stack</div>
+              <h3 class="rpg-card__title mb-2">Herramientas y metodologías</h3>
+              <p class="rpg-card__desc">Conjunto de herramientas que aplico para desarrollo, integración y colaboración.</p>
+              <div class="rpg-card__tech mt-3">
+                <span>Git & GitHub</span><span>Maven / Gradle</span><span>Docker</span>
+                <span>Postman</span><span>APIs REST</span><span>Jetpack Compose</span><span>IntelliJ IDEA</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 reveal">
+            <article class="rpg-card rpg-card--lore h-100">
+              <div class="rpg-card__pill mb-3">🐍 Formación</div>
+              <h3 class="rpg-card__title mb-2">Bootcamp Data Analyst Junior <span class="rpg-badge-small">850 h</span></h3>
+              <p class="rpg-card__desc">Formación técnica como analista de datos: pipeline completo desde la ingesta hasta la visualización.</p>
+              <ul class="rpg-list">
+                <li>Python</li>
+                <li>Numpy / Pandas / Matplotlib / Seaborn / scikit-learn</li>
+                <li>Jupyter Notebook / Google Colab</li>
+                <li>Excel avanzado / Power BI</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-md-6 reveal">
+            <article class="rpg-card rpg-card--lore h-100">
+              <div class="rpg-card__pill rpg-card__pill--gold mb-3">⚡ Tech Stack</div>
+              <h3 class="rpg-card__title mb-2">Herramientas de análisis</h3>
+              <p class="rpg-card__desc">Stack de análisis, visualización y modelado predictivo.</p>
+              <div class="rpg-card__tech mt-3">
+                <span>Python</span><span>Pandas / NumPy</span><span>scikit-learn</span>
+                <span>Matplotlib / Seaborn</span><span>Jupyter / Colab</span><span>Power BI / Excel</span>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACTO
+    ════════════════════════════════════════ -->
+    <section id="contact" class="rpg-section rpg-section--alt">
+      <div class="container-xl">
+
+        <div class="rpg-section__header text-center mb-5 reveal">
+          <div class="rpg-section__tag">[ Zona de Contacto ]</div>
+          <h2 class="rpg-section__title">Contáctame</h2>
+          <p class="rpg-section__sub">Disponible para proyectos de desarrollo Web/Móvil</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+          <div class="col-md-5 reveal">
+            <div class="rpg-contact-card h-100">
+              <div class="rpg-card__pill mb-4">📋 Información</div>
+              <ul class="rpg-contact-list list-unstyled">
+                <li>
+                  <span class="rpg-contact-icon">📞</span>
+                  <div>
+                    <p class="rpg-contact-label">Teléfono</p>
+                    <p class="rpg-contact-value">+34 638 89 38 47</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="rpg-contact-icon">✉️</span>
+                  <div>
+                    <p class="rpg-contact-label">Email</p>
+                    <p class="rpg-contact-value">jaimeamuedo@gmail.com</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="rpg-contact-icon">📍</span>
+                  <div>
+                    <p class="rpg-contact-label">Ubicación</p>
+                    <p class="rpg-contact-value">Sevilla, España</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-5 reveal">
+            <div class="rpg-contact-card rpg-contact-card--cta h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="rpg-card__pill rpg-card__pill--gold mb-4">✨ Hablemos</div>
+                <p class="rpg-about-text">
+                  Abierto a nuevas oportunidades en desarrollo de aplicaciones Java y proyectos de analítica o visualización de datos.
+                  No dudes en contactarme.
+                </p>
+              </div>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a href="https://github.com/JaimeAmuedoJAH"      target="_blank" rel="noopener noreferrer" class="rpg-btn rpg-btn--primary">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/jaime-amuedo/" target="_blank" rel="noopener noreferrer" class="rpg-btn rpg-btn--ghost">💼 LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__content">
-      <p class="footer__copy">
-        © <span id="year"></span> Jaime Amuedo Hidalgo · Software Developer
-      </p>
-      <div class="footer__links">
-        <a href="mailto:jaimeamuedo@gmail.com" class="footer__link">Email</a>
-        <a href="https://www.linkedin.com/in/jaime-amuedo/" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/JaimeAmuedoJAH" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <!-- FOOTER -->
+  <footer class="rpg-footer">
+    <div class="container-xl d-flex flex-wrap align-items-center justify-content-between gap-3">
+      <p class="mb-0">© <span id="year"></span> Jaime Amuedo Hidalgo · Software Developer</p>
+      <div class="d-flex gap-3">
+        <a href="mailto:jaimeamuedo@gmail.com" class="rpg-footer__link">Email</a>
+        <a href="https://www.linkedin.com/in/jaime-amuedo/"  target="_blank" rel="noopener noreferrer" class="rpg-footer__link">LinkedIn</a>
+        <a href="https://github.com/JaimeAmuedoJAH"          target="_blank" rel="noopener noreferrer" class="rpg-footer__link">GitHub</a>
       </div>
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
